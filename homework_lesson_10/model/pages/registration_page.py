@@ -5,6 +5,7 @@ from homework_lesson_10 import resources
 
 
 class RegistrationPage:
+
     def open(self):
         browser.open('/automation-practice-form')
         browser.should(have.title('DEMOQA'))
@@ -65,17 +66,9 @@ class RegistrationPage:
         browser.element('#submit').click()
 
     def assert_registration_user_data(self, full_name, email, gender, number, birthday,
-                                      subject, hobbie, picture, address, state_and_city):
+                                      subject, hobbies, picture, address, state_and_city):
         browser.element('#example-modal-sizes-title-lg').should(have.text('Thanks for submitting the form'))
-        browser.element('.table').all('td').even.should(have.exact_texts(
-            full_name,
-            email,
-            gender,
-            number,
-            birthday,
-            subject,
-            hobbie,
-            picture,
-            address,
-            state_and_city))
+        browser.element('.table').all('td').even.should(have.exact_texts(full_name, email, gender, number,
+                                                                         birthday, subject, hobbies, picture,
+                                                                         address, state_and_city))
 

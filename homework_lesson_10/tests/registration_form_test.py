@@ -1,4 +1,3 @@
-
 from homework_lesson_10.model.pages.registration_page import RegistrationPage
 
 
