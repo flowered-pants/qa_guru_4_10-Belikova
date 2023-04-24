@@ -44,8 +44,7 @@ class RegistrationPage:
         browser.element('#example-modal-sizes-title-lg').should(have.text('Thanks for submitting the form'))
         browser.element('.table').all('td').even.should(have.exact_texts(student.first_name + ' ' + student.last_name,
                                                                          student.email, student.gender,
-                                                                         student.number,
-                                                                         student.day + ' February' + ',' + student.year,
-                                                                         student.subject, student.hobbies,
-                                                                         student.picture,
-                                                                         student.address, student.state_and_city))
+                                                                         student.number, student.day + ' February'
+                                                                         + ',' + student.year, student.subject,
+                                                                         student.hobbies, student.picture, student.address,
+                                                                         student.state_and_city))
