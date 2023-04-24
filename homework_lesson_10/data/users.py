@@ -33,7 +33,7 @@ class Students:
 
 
 student = Students(first_name='Evgeniia', last_name='Belikova', email='mur@loc.ru',
-                   gender='Female', number='88002000600', day='27', month='2', year='1997',
+                   gender='Female', number='8800200060', day='27', month='2', year='1997',
                    subject='Computer Science', hobbies='Sports, Reading, Music',
                    picture='pic.png', address='Moscow, Russia',
                    state_and_city='Uttar Pradesh Merrut')

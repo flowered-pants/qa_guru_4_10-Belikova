@@ -1,14 +1,12 @@
 import socket
 import pytest
 from selene import browser
-import time
 
 
 @pytest.fixture(scope='function', autouse=True)
 def browser_managment():
     sock = socket.socket()
     sock.settimeout(20)
-    time.sleep(20)
     browser.config.hold_browser_open = True
     browser.config.type_by_js = True
     browser.config.browser_name = 'chrome'

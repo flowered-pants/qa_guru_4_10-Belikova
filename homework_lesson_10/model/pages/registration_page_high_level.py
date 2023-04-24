@@ -2,7 +2,6 @@ from selene import browser
 from selene import have, be
 from selenium.webdriver.common.keys import Keys
 from homework_lesson_10 import resources
-from homework_lesson_10.data.users import Students
 
 
 class RegistrationPage:
@@ -43,10 +42,10 @@ class RegistrationPage:
 
     def should_have_registered(self, student):
         browser.element('#example-modal-sizes-title-lg').should(have.text('Thanks for submitting the form'))
-        browser.element('.table').all('td').even.should(have.exact_text(repr(student.first_name + ' ' + student.last_name,
+        browser.element('.table').all('td').even.should(have.exact_texts(student.first_name + ' ' + student.last_name,
                                                                          student.email, student.gender,
                                                                          student.number,
                                                                          student.day + ' February' + ',' + student.year,
                                                                          student.subject, student.hobbies,
                                                                          student.picture,
-                                                                         student.address, student.state_and_city)))
+                                                                         student.address, student.state_and_city))
