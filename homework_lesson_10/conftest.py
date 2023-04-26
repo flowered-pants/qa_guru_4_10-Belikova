@@ -1,6 +1,6 @@
+import socket
 import pytest
 from selene import browser
-import socket
 
 
 @pytest.fixture(scope='function', autouse=True)
